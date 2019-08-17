@@ -90,5 +90,12 @@ namespace loginAndReg.Controllers
             }
             return View("Success");
         }
+
+        [HttpGet("logout")]
+        public RedirectToActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }

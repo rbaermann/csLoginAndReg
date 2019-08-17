@@ -26,6 +26,12 @@ namespace loginAndReg.Models
         [MinLength(8)]
         public string Password {get; set;}
 
+        [Required]
+        public DateTime CreatedAt {get; set;} = DateTime.Now;
+
+        [Required]
+        public DateTime UpdatedAt {get; set;} = DateTime.Now;
+
         [NotMapped]
         [Compare("Password")]
         [DataType(DataType.Password)]
